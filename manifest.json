@@ -3,20 +3,8 @@
   "name": "MyBoard",
   "version": "1.0.0",
   "description": "Chrome Extension - MyBoard",
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_title": "MyBoard",
-    "default_icon": {
-      "16": "icons/icon16.png",
-      "32": "icons/icon32.png",
-      "48": "icons/icon48.png",
-      "128": "icons/icon128.png"
-    }
-  },
+  "permissions": ["storage", "activeTab", "tabs", "downloads", "offscreen"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
@@ -25,11 +13,5 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "icons": {
-    "16": "icons/icon16.png",
-    "32": "icons/icon32.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  }
+  ]
 }
