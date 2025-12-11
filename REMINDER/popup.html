@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reminder</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=wb_incandescent"
+    />
+  </head>
+  <body>
+    <main id="app">
+      <div class="toolbar">
+        <h1 class="title-row">Reminder</h1>
+        <button type="button" id="stop-alarm-button" class="ghost-button">
+          알람 끄기
+        </button>
+      </div>
+      <p id="current-time" class="current-time"></p>
+      <form id="reminder-form">
+        <div class="field">
+          <label for="title">제목</label>
+          <input
+            id="title"
+            name="title"
+            type="text"
+            placeholder="예: 회의 준비하기"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="time">시간</label>
+          <input id="time" name="time" type="time" lang="en-GB" />
+        </div>
+
+        <div class="actions-row">
+          <button type="submit" class="primary-button">저장</button>
+          <button type="button" id="test-alarm-button" class="secondary-button">
+            테스트
+          </button>
+        </div>
+      </form>
+
+      <p id="status" class="status-text">리마인더를 입력해 보세요.</p>
+
+      <h2 class="upcoming-title">Upcoming</h2>
+      <ol id="reminder-list"></ol>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

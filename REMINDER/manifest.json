@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Reminder",
+  "description": "브라우저에서 간단하게 리마인더를 추가하고 관리하는 Chrome 확장 프로그램입니다.",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "Reminder",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "alarms", "notifications", "windows"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;"
+  }
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Extensions Collection by Vibe Coding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .extensions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .extension-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .extension-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .extension-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335);
+        }
+
+        .extension-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .extension-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .extension-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .extension-version {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .extension-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .extension-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #4285f4;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3367d6;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #e0e0e0;
+        }
+
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+
+        .stats {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stats h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4285f4;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .extensions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .extension-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Chrome Extensions Collection by Vibe Coding</h1>
+            <p>Vibe Coding의 학습을 목적으로 개발한 Chrome Extension들을 한 곳에서 관리하고 탐색하세요</p>
+        </div>
+
+        <div class="extensions-grid">
+            <!-- MY_BOARD Extension -->
+            <div class="extension-card">
+                <div class="extension-header">
+                    <div class="extension-icon">📌</div>
+                    <div>
+                        <div class="extension-title">MyBoard</div>
+                        <div class="extension-version">v1.0.0</div>
+                    </div>
+                </div>
+                <div class="extension-description">
+                    웹페이지 텍스트 하이라이트 및 영역 캡쳐 도구입니다.
+                </div>
+                <div class="extension-actions">
+                    <a href="MY_BOARD/" class="btn btn-primary">
+                        📁 폴더 열기
+                    </a>
+                </div>
+            </div>
+
+            <!-- REMINDER Extension -->
+            <div class="extension-card">
+                <div class="extension-header">
+                    <div class="extension-icon">⏰</div>
+                    <div>
+                        <div class="extension-title">Reminder</div>
+                        <div class="extension-version">v1.0.0</div>
+                    </div>
+                </div>
+                <div class="extension-description">
+                    브라우저 사용 중 빠르게 리마인더를 등록하고 관리하는 도구입니다.
+                </div>
+                <div class="extension-actions">
+                    <a href="REMINDER/" class="btn btn-primary">
+                        📁 폴더 열기
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>💡 새로운 익스텐션을 추가하면 이 페이지를 업데이트하세요</p>
+        </div>
+    </div>
+
+    <script>
+        // 페이지 로드 시 애니메이션
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.extension-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html> 

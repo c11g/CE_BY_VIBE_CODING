@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reminder Alarm</title>
+    <style>
+      /* 창이 열리더라도 사용자가 보지 못하도록 숨김 처리 */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: transparent;
+      }
+      body {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="alarm-audio" src="midi.mp3" autoplay></audio>
+    <script src="alarm-player.js"></script>
+  </body>
+</html>
